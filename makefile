@@ -6,5 +6,7 @@ tex: tex.c fc.h
 
 xsInit:
 	h2xs -A -n xsModule
+	cp xsModule.xs xsModule/xsModule.xs
+	cp Makefile.PM xsModule/Makefile.PM
 .PHONY: xsInit
 
