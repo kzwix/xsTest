@@ -2,7 +2,7 @@ fc.so: fc.c fc.h
 	gcc -shared -fPIC -o $@ $<
 
 tex: tex.c fc.h
-	gcc -L. -l:fc.so -o $@ $<
+	gcc -L.  -o $@ $< -l:fc.so
 
 xsInit:
 	h2xs -A -n xsModule

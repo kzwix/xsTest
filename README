@@ -10,7 +10,7 @@ To compile the C program testing that the test shared library "works as intended
 
 To execute the C test program:
 
-	./tex
+	LD_LIBRARY_PATH=. ./tex
 
 (It shouldn't find the library, because it is not in the usual library search path.
 Now, type "export LD_LIBRARY_PATH=." - while in the project directory, then try again.
