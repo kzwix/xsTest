@@ -1,0 +1,29 @@
+To compile the test library:
+
+	make -f makefile fc.so
+
+
+To compile the C program testing that the test shared library "works as intended":
+
+	make -f makefile tex
+
+
+To execute the C test program:
+
+	./tex
+
+(It shouldn't find the library, because it is not in the usual library search path.
+Now, type "export LD_LIBRARY_PATH=." - while in the project directory, then try again.
+This time, the program should work as intended, and display beautiful lines on stdout...)
+
+
+
+Now, the XS part:
+
+To create the xs directory tree, simply use:
+
+	make -f makefile xsInit
+
+
+
+
