@@ -24,6 +24,14 @@ To create the xs directory tree, simply use:
 
 	make -f makefile xsInit
 
+It should call x2xs to create the module directory tree, then replace the Makefile.PL and xsModule.xs files with the ones in the project root.
+The next step would be to go to the xsModule directory, to run the "standard" build steps:
 
+	perl Makefile.pl
+
+(which will generate a Makefile from the Makefile.PL)
+
+	make				(will generate the module files, including xsModule.pm and xsModule.so, which will contain the C glue)
+	sudo make install	(will copy the module's contentents to your system directories)
 
 
