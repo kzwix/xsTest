@@ -7,3 +7,7 @@ use ExtUtils::testlib;
 use xsModule;
 
 xsModule::ka();
+
+print "\n";
+
+xsModule::kb();
